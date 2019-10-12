@@ -37,7 +37,8 @@ func vars() {
 
 func arrays(){
 	names := [3]string{"Mike", "Lawl", "Jenkins"}
-
+  fmt.Println(names[])
 	fmt.Println(names[1])
 	
+
 }
