@@ -22,13 +22,22 @@ func main() {
 			zipCode: 9400,
 		},
 	}
+	// &variable equals to accessing the memory address of this variable
+	// so then we can overwrite this and our code runs as desired
+	// it is also pointer to a type person
+	// jimPointer := &jim 
+	// jimPointer.updateName("Jimmy")
+	// jim.print()
+
 	jim.updateName("Jimmy")
 	jim.print()
 	
 }
 
-func (p person) updateName (newFirstName string) {
-	p.firstName = newFirstName
+// we can only use this function with a type pointerToPerson 
+// which jim is actually
+func (pointerToPerson *person) updateName (newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {
